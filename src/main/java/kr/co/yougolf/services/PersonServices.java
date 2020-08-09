@@ -6,8 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import kr.co.yougolf.converter.DozerConverter;
+import kr.co.yougolf.converter.custom.PersonConverter;
 import kr.co.yougolf.data.model.Person;
 import kr.co.yougolf.data.vo.PersonVO;
+import kr.co.yougolf.data.vo.v2.PersonVOV2;
 import kr.co.yougolf.exception.ResourceNotFoundException;
 import kr.co.yougolf.repository.PersonRepository;
  
@@ -17,9 +19,18 @@ public class PersonServices {
 	@Autowired
 	PersonRepository repository;
 	
+	@Autowired
+	PersonConverter converter;
+	
 	public PersonVO create(PersonVO personVo) {	
 		Person entity = DozerConverter.parseObject(personVo, Person.class);
 		PersonVO vo = DozerConverter.parseObject(repository.save(entity), PersonVO.class);
+		return vo;
+	}
+	
+	public PersonVOV2 createV2(PersonVOV2 personVoV2) {	
+		Person entity = converter.convertVoToEntity(personVoV2);
+		PersonVOV2 vo = converter.convertEntityToVo(repository.save(entity));
 		return vo;
 	}
 	
