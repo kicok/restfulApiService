@@ -2,13 +2,6 @@ package kr.co.yougolf.data.vo;
 
 import java.io.Serializable;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-import kr.co.yougolf.data.model.Person;
-
 public class PersonVO implements Serializable {
 	
 	private static final long serialVersionUID = 1L;

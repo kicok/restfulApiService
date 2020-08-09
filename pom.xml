@@ -40,6 +40,12 @@
 		    <artifactId>mariadb-java-client</artifactId>
 	    </dependency>
 	    
+	    <dependency>
+		    <groupId>com.github.dozermapper</groupId>
+		    <artifactId>dozer-core</artifactId>
+		    <version>6.5.0</version>
+		</dependency>
+	    
 	    <!-- <dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
