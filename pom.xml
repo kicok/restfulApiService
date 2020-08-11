@@ -19,48 +19,58 @@
   </properties>
   
   <dependencies>
+  
+  		<!-- for SpringBoot support -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-rest</artifactId>
 		</dependency>
 		
+		<!-- for JPA support -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
-
+		
+		<!-- for Unit Tests support -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope> 
 		</dependency>
 		
+		<!-- for Unit devtools -->
 		<dependency>
 		    <groupId>org.springframework.boot</groupId>
 		    <artifactId>spring-boot-devtools</artifactId>
 		</dependency>
 		
+		<!-- for Mariadb support -->
 		<dependency>
 		    <groupId>org.mariadb.jdbc</groupId>
 		    <artifactId>mariadb-java-client</artifactId>
 	    </dependency>
 	    
+	    <!-- for Migrations support -->
 	    <dependency>
             <groupId>org.flywaydb</groupId>
             <artifactId>flyway-core</artifactId>
         </dependency>
 	    
+	    <!-- for Model Mapper support -->
 	    <dependency>
 		    <groupId>com.github.dozermapper</groupId>
 		    <artifactId>dozer-core</artifactId>
 		    <version>6.5.0</version>
 		</dependency>
-	    
-	    <!-- <dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-		</dependency> -->
-        
+		
+		<!-- for XML support -->  
+        <dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-xml</artifactId>
+		</dependency>		
+			    
+        <!-- for Unit Tests support -->
         <dependency>
           <groupId>junit</groupId>
           <artifactId>junit</artifactId>
