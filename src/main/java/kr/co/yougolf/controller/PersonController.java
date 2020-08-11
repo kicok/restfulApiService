@@ -18,7 +18,7 @@ import kr.co.yougolf.data.vo.v2.PersonVOV2;
 import kr.co.yougolf.services.PersonServices;
 
 @RestController
-@RequestMapping("/person")
+@RequestMapping("/api/person/v1")
 public class PersonController {
 	
 	@Autowired
