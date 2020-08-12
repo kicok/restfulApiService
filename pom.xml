@@ -7,8 +7,8 @@
   		<version>2.3.2.RELEASE</version>
   </parent>
   
-  <groupId>br.com.erudio</groupId>
-  <artifactId>rest-with-springboot-udemy</artifactId>
+  <groupId>kr.co.yougolf</groupId>
+  <artifactId>restfulApiService</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
   
