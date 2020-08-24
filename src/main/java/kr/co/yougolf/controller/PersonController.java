@@ -2,6 +2,7 @@ package kr.co.yougolf.controller;
 
 import java.util.List;
 
+import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -33,7 +34,9 @@ public class PersonController {
 	@GetMapping(value = "/{id}", produces = {"application/json", "application/xml", "application/x-yaml"})
 	public PersonVO findById(@PathVariable("id") Long id){
 		
-		return services.findById(id);		
+		PersonVO personVO = services.findById(id);
+		personVO.add(linkTo(methodOn(PersonController.class).findById(id).withSelfRel()));
+		return personVO;
 	}
 
 	@PostMapping(produces = {"application/json", "application/xml", "application/x-yaml"},
