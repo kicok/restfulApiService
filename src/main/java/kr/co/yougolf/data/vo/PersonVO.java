@@ -11,12 +11,13 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.springframework.hateoas.RepresentationModel;
 
 
-//@JsonPropertyOrder({"id", "address", "firstName", "lastName", "gender"})
+@JsonPropertyOrder({"id", "address", "firstName", "lastName", "gender"})
 public class PersonVO extends RepresentationModel implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 
 	@Mapping("id")
+	@JsonProperty("id")
 	private Long key;
 	
 	@JsonProperty("first_name")
